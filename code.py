@@ -9,7 +9,7 @@ df = spark.read.csv(
 
 # Step 2:
 # Drop the duplicate records in the dataset
-df.dropDuplicates()
+df = df.dropDuplicates()
 
 # Step 3:
 # Check the missing values of variables
