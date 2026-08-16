@@ -42,14 +42,4 @@ print(
     f"Total PySpark execution time: "
     f"{total_end - total_start:.3f} seconds"
 )
-
-
-# Step 7: Time only the category aggregation
-start = time.time()
-df.groupBy("category_code") \
-    .count() \
-    .orderBy("count", ascending=False) \
-    .show(truncate=False)
-end = time.time()
-print(f"Execution time: {end - start:.3f} seconds")
 spark.stop()
