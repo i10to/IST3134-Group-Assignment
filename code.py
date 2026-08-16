@@ -7,12 +7,12 @@ spark = SparkSession.builder.appName("Ecommerce Analysis").getOrCreate()
 # Start the timer for the whole process
 total_start = time.time()
 
-# Step 1: Read the dataset from S3
-df = spark.read.csv(
-    "s3://ist3134-rameen-ecommerce-2026/2019-Nov.csv",
-    header=True,
-    inferSchema=True
-)
+# Step 1: Read the dataset from S3 (this is for Rameen's bucket)     | (this is for Ethan's bucket)
+df = spark.read.csv(                                                 | df = spark.read.csv(
+    "s3://ist3134-rameen-ecommerce-2026/2019-Nov.csv",               |  "s3://ist3134-group-assignment-2026/2019-Nov.csv",
+    header=True,                                                     |   header=True,
+    inferSchema=True                                                 |   inferSchema=True
+)                                                                    |)
 
 # Step 2: Remove duplicate records
 df = df.dropDuplicates()
