@@ -5,6 +5,6 @@ Using the given dataset, We want to see how which category is the most popular i
 The codes and its' explanation are available in code.py
 
 Disclaimer:\
-Dr, if you're seeing that there this 2 separate python files, don't be confused. The only difference from them is just the\
+Dr, if you're seeing that there this 2 separate AWS code files, don't be confused. The only difference from them is just the\
 **code used for reading our dataset from the s3 bucket** \
 Both of us has a different bucket name, so we can't use the same code :) 
